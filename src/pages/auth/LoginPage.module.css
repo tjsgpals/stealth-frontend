@@ -1,0 +1,179 @@
+.container {
+  position: relative;
+  width: 1280px;
+  height: 800px;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.square1 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 80px;
+  top: 80px;
+  background: #f204e7;
+  opacity: 0.3;
+}
+
+.square2 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 1168px;
+  top: 688px;
+  background: #ecfeac;
+  opacity: 0.3;
+}
+
+.loginBox {
+  position: relative;
+  z-index: 10;
+  width: 500px;
+  background: #0a0a1e;
+  border: 7.65px solid #c5b9ff;
+  box-shadow: 8px 8px 0px #423df3;
+  display: flex;
+  flex-direction: column;
+}
+
+.title {
+  font-size: 36px;
+  color: #c5b9ff;
+  text-align: center;
+  margin: 0;
+  padding: 39.63px 39.63px 0 39.63px;
+}
+
+.inputsContainer {
+  display: flex;
+  flex-direction: column;
+  gap: 24px;
+  margin: 39.63px 39.63px 0 39.63px;
+}
+
+.inputField {
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+.label {
+  font-size: 14px;
+  color: #c5b9ff;
+  margin: 0;
+  text-align: left;  /* ← 왼쪽 정렬 */
+}
+
+.input {
+  width: 100%;
+  height: 51px;
+  padding: 12px 16px;
+  background: #1a1a2e;
+  border: 3.5px solid #c5b9ff;
+  color: #c5b9ff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  box-sizing: border-box;
+}
+
+.input::placeholder {
+  color: #c5b9ff;
+  opacity: 0.6;
+}
+
+.input:focus {
+  outline: none;
+  border-color: #f204e7;
+}
+
+.buttonContainer {
+  display: flex;
+  justify-content: center;
+  margin: 23.99px 39.63px 0 39.63px;
+}
+
+.loginBtn {
+  width: 96px;
+  height: 64px;
+  background: #ecfeac;
+  border: 3.5px solid #f204e7;
+  box-shadow: 4px 4px 0px #f204e7;
+  color: #0a0a0a;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+}
+
+.loginBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #f204e7;
+}
+
+.loginBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #f204e7;
+}
+
+.divider {
+  height: 0;
+  border-top: 3.5px solid rgba(197, 185, 255, 0.3);
+  margin: 29.69px 39.63px 0 39.63px;
+}
+
+.signupSection {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 16.11px;
+  margin: 16.11px 39.63px 39.63px 39.63px;
+}
+
+.signupText {
+  font-size: 12px;
+  color: rgba(197, 185, 255, 0.6);
+  margin: 0;
+}
+
+.signupBtn {
+  width: 96px;
+  height: 64px;
+  background: #c5b9ff;
+  border: 3.5px solid #423df3;
+  box-shadow: 4px 4px 0px #423df3;
+  color: #0a0a0a;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  white-space: nowrap;  /* ← 한 줄로 고정 */
+  display: flex;  
+  align-items: center;  
+  justify-content: center;  
+
+}
+
+.signupBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #423df3;
+}
+
+.signupBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #423df3;
+}

@@ -1,0 +1,178 @@
+.container {
+  position: relative;
+  width: 1280px;
+  height: 800px;
+  background: #1a1a2e;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  overflow: hidden;
+}
+
+/* 배경 사각형들 */
+.square1 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 80px;
+  top: 80px;
+  background: #f204e7;
+  opacity: 0.3;
+}
+
+.square2 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 1128px;
+  top: 160px;
+  background: #423df3;
+  opacity: 0.3;
+}
+
+.square3 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 160px;
+  top: 632px;
+  background: #ecfeac;
+  opacity: 0.2;
+}
+
+.square4 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 1168px;
+  top: 688px;
+  background: #c5b9ff;
+  opacity: 0.3;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.content {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 40px;
+}
+
+.title {
+  width: 438px;
+  height: 60px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 60px;
+  line-height: 60px;
+  letter-spacing: 3px;
+  color: #c5b9ff;
+  text-align: center;
+  margin: 0;
+  text-shadow: 
+    3px 3px 0px #423df3,
+    6px 6px 0px #9d4edd;
+}
+
+.subtitle {
+  width: 345px;
+  height: 20px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  line-height: 20px;
+  letter-spacing: 0.35px;
+  color: #c5b9ff;
+  opacity: 0.8;
+  margin: 0;
+  text-align: center;
+}
+
+.buttons {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  gap: 32px;
+  padding: 0;
+  margin: 20px 0;
+}
+
+.loginBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 96px;
+  height: 64px;
+  background: #ecfeac;
+  border: 3.5px solid #f204e7;
+  box-shadow: 4px 4px 0px #f204e7;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  color: #0a0a0a;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.1s ease;
+}
+
+.loginBtn:hover {
+  transform: translate(-2px, -2px);
+  box-shadow: 6px 6px 0px #f204e7;
+}
+
+.loginBtn:active {
+  transform: translate(2px, 2px);
+  box-shadow: 2px 2px 0px #f204e7;
+}
+
+.enterBtn {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  width: 128px;
+  height: 128px;
+  background: #c5b9ff;
+  border: 7.65px solid #423df3;
+  box-shadow: 6px 6px 0px #423df3;
+  border-radius: 50%;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  color: #0a0a0a;
+  cursor: pointer;
+  text-transform: uppercase;
+  transition: all 0.2s ease;
+}
+
+.enterBtn:hover {
+  transform: scale(1.08);
+  box-shadow: 8px 8px 0px #423df3;
+}
+
+.enterBtn:active {
+  transform: scale(0.95);
+  box-shadow: 3px 3px 0px #423df3;
+}
+
+.logoutBtn {
+  margin-top: 20px;
+  padding: 8px 24px;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  background: transparent;
+  color: #f204e7;
+  border: 2px solid #f204e7;
+  cursor: pointer;
+  transition: all 0.1s ease;
+}
+
+.logoutBtn:hover {
+  background: #f204e7;
+  color: #1a1a2e;
+}
