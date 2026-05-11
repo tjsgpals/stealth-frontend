@@ -1,16 +1,56 @@
 import { useState } from 'react';
 import { useNavigate } from 'react-router-dom';
+import axios from 'axios';
 import styles from './LoginPage.module.css';
+
+const API_BASE_URL = 'http://172.30.1.27:5000';
 
 function LoginPage({ onLogin }) {
   const navigate = useNavigate();
   const [id, setId] = useState('');
   const [password, setPassword] = useState('');
+  const [loading, setLoading] = useState(false);
 
-  const handleLogin = () => {
-    if (id && password) {
-      onLogin();
-      navigate('/loading');
+  const handleLogin = async () => {
+    if (!id || !password) {
+      alert('ID와 PASSWORD를 입력해주세요');
+      return;
+    }
+
+    setLoading(true);
+
+    try {
+      const response = await axios.post(`${API_BASE_URL}/auth/login`, {
+        username: id,
+        password: password,
+      });
+
+      if (response.data.success) {
+        alert('로그인 성공!');
+        localStorage.setItem('user_id', response.data.user_id);
+        localStorage.setItem('nickname', response.data.nickname);
+        onLogin();
+        navigate('/game/ready');  // ← 여기 변경
+      } else {
+        alert('로그인 실패: ' + response.data.message);
+      }
+    } catch (error) {
+      console.error('로그인 에러:', error);
+      if (error.response?.status === 401) {
+        alert('ID 또는 PASSWORD가 일치하지 않습니다');
+      } else if (error.response?.status === 404) {
+        alert('존재하지 않는 사용자입니다');
+      } else {
+        alert('로그인 중 오류가 발생했습니다');
+      }
+    } finally {
+      setLoading(false);
+    }
+  };
+
+  const handleKeyPress = (e) => {
+    if (e.key === 'Enter') {
+      handleLogin();
     }
   };
 
@@ -33,6 +73,7 @@ function LoginPage({ onLogin }) {
               placeholder="ENTER YOUR ID"
               value={id}
               onChange={(e) => setId(e.target.value)}
+              onKeyPress={handleKeyPress}
             />
           </div>
 
@@ -44,13 +85,18 @@ function LoginPage({ onLogin }) {
               placeholder="ENTER PASSWORD"
               value={password}
               onChange={(e) => setPassword(e.target.value)}
+              onKeyPress={handleKeyPress}
             />
           </div>
         </div>
 
         <div className={styles.buttonContainer}>
-          <button className={styles.loginBtn} onClick={handleLogin}>
-            LOGIN
+          <button
+            className={styles.loginBtn}
+            onClick={handleLogin}
+            disabled={loading}
+          >
+            {loading ? 'LOADING...' : 'LOGIN'}
           </button>
         </div>
 
@@ -58,7 +104,7 @@ function LoginPage({ onLogin }) {
 
         <div className={styles.signupSection}>
           <p className={styles.signupText}>DON'T HAVE AN ACCOUNT?</p>
-          <button 
+          <button
             className={styles.signupBtn}
             onClick={() => navigate('/signup')}
           >

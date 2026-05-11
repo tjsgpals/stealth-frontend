@@ -1,0 +1,261 @@
+/* src/pages/game/GameReadyPage.module.css */
+
+.container {
+  position: relative;
+  width: 1280px;
+  height: 800px;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  overflow: hidden;
+}
+
+/* 배경 장식 사각형 */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.square1 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 100px;
+  top: 100px;
+  background: #a946ff;
+  opacity: 0.4;
+}
+
+.square2 {
+  position: absolute;
+  width: 35px;
+  height: 35px;
+  right: 120px;
+  top: 200px;
+  background: #423df3;
+  opacity: 0.3;
+}
+
+.square3 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 80px;
+  bottom: 150px;
+  background: #7c7c8c;
+  opacity: 0.2;
+}
+
+/* 상단 정보 헤더 */
+.topHeader {
+  position: absolute;
+  top: 40px;
+  left: 0;
+  right: 0;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  padding: 0 60px;
+  z-index: 20;
+}
+
+.timeDisplay {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  color: #c5b9ff;
+  letter-spacing: 2px;
+}
+
+.scoreDisplay {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 20px;
+  color: #c5b9ff;
+  letter-spacing: 2px;
+  text-align: center;
+}
+
+.taggerDisplay {
+  font-family: 'Press Start 2P', monospace;
+  font-size: 18px;
+  color: #c5b9ff;
+  letter-spacing: 2px;
+  text-align: right;
+}
+
+.taggerNumber {
+  color: #ecfeac;
+  font-weight: bold;
+}
+
+/* 메인 컨테이너 */
+.mainContainer {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: center;
+  gap: 40px;
+  width: 100%;
+  height: 100%;
+}
+
+/* 게임 영상 박스 */
+.gameBox {
+  width: 900px;
+  height: 450px;
+  background: #000000;
+  border: 8px solid #ffffff;
+  box-shadow: 0 0 20px rgba(66, 61, 243, 0.5), 
+              inset 0 0 30px rgba(197, 185, 255, 0.1);
+  border-right: 8px solid #423df3;
+  border-bottom: 8px solid #423df3;
+  box-sizing: border-box;
+  position: relative;
+}
+
+/* 컨트롤 버튼 영역 */
+.controlContainer {
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  align-items: center;
+  gap: 40px;
+  z-index: 15;
+}
+
+/* SELECT TAGGER 버튼 */
+.selectTaggerBtn {
+  width: 100px;
+  height: 100px;
+  background: #423df3;
+  border: 6px solid #c5b9ff;
+  box-shadow: 0 8px 0px rgba(197, 185, 255, 0.3),
+              0 0 20px rgba(66, 61, 243, 0.6);
+  color: #ffffff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  text-align: center;
+  line-height: 1.1;
+  padding: 8px;
+  box-sizing: border-box;
+}
+
+.selectTaggerBtn:hover:not(:disabled) {
+  transform: translateY(-3px);
+  box-shadow: 0 12px 0px rgba(197, 185, 255, 0.4),
+              0 0 25px rgba(66, 61, 243, 0.8);
+}
+
+.selectTaggerBtn:active:not(:disabled) {
+  transform: translateY(-1px);
+  box-shadow: 0 6px 0px rgba(197, 185, 255, 0.3),
+              0 0 20px rgba(66, 61, 243, 0.6);
+}
+
+.selectTaggerBtn:disabled {
+  opacity: 0.7;
+  cursor: not-allowed;
+}
+
+/* START 버튼 */
+.startBtn {
+  width: 140px;
+  height: 140px;
+  background: #c5b9ff;
+  border: 8px solid #423df3;
+  border-radius: 70px;
+  box-shadow: 0 0 30px rgba(197, 185, 255, 0.4),
+              0 12px 20px rgba(66, 61, 243, 0.3);
+  color: #0a0a0a;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 22px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.startBtn:hover:not(:disabled) {
+  transform: translateY(-4px);
+  box-shadow: 0 0 35px rgba(197, 185, 255, 0.6),
+              0 15px 25px rgba(66, 61, 243, 0.4);
+}
+
+.startBtn:active:not(:disabled) {
+  transform: translateY(-2px);
+  box-shadow: 0 0 30px rgba(197, 185, 255, 0.4),
+              0 10px 15px rgba(66, 61, 243, 0.3);
+}
+
+.startBtn:disabled {
+  opacity: 0.5;
+  cursor: not-allowed;
+  background: #999999;
+  border-color: #666666;
+}
+
+/* 프로필 아이콘 */
+.profileIcon {
+  position: absolute;
+  bottom: 40px;
+  left: 40px;
+  width: 80px;
+  height: 80px;
+  background: #c5b9ff;
+  border: 5px solid #423df3;
+  box-shadow: 0 8px 0px rgba(66, 61, 243, 0.4),
+              0 0 20px rgba(197, 185, 255, 0.3);
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  z-index: 15;
+  padding: 0;
+  border-radius: 5px;
+}
+
+.profileIcon img {
+  width: 45px;
+  height: 45px;
+  object-fit: contain;
+}
+
+.profileIcon:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 10px 0px rgba(66, 61, 243, 0.4),
+              0 0 25px rgba(197, 185, 255, 0.4);
+}
+
+.profileIcon:active {
+  transform: translateY(0px);
+  box-shadow: 0 6px 0px rgba(66, 61, 243, 0.4),
+              0 0 20px rgba(197, 185, 255, 0.3);
+}
+
+/* 로딩 상태 */
+.loading {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  color: #c5b9ff;
+  font-size: 14px;
+  z-index: 5;
+}

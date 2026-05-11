@@ -1,38 +1,34 @@
 import { BrowserRouter as Router, Routes, Route } from 'react-router-dom';
-import { useState } from 'react';
-import MainPage from './pages/main/MainPage';
 import LoginPage from './pages/auth/LoginPage';
 import SignUpPage from './pages/auth/SignUpPage';
+import GameReadyPage from './pages/game/GameReadyPage';
 import './App.module.css';
+import { GameProvider } from './context/GameContext';
 
 function App() {
-  const [isLoggedIn, setIsLoggedIn] = useState(false);
-
-  const handleLogin = () => {
-    setIsLoggedIn(true);
-  };
-
-  const handleLogout = () => {
-    setIsLoggedIn(false);
-  };
-
   return (
-    <Router>
-      <Routes>
-        <Route 
-          path="/" 
-          element={<MainPage isLoggedIn={isLoggedIn} onLogout={handleLogout} />} 
-        />
-        <Route 
-          path="/login" 
-          element={<LoginPage onLogin={handleLogin} />} 
-        />
-        <Route 
-          path="/signup" 
-          element={<SignUpPage />} 
-        />
-      </Routes>
-    </Router>
+    <GameProvider>
+      <Router>
+        <Routes>
+          <Route 
+            path="/" 
+            element={<GameReadyPage />} 
+          />
+          <Route 
+            path="/login" 
+            element={<LoginPage />} 
+          />
+          <Route 
+            path="/signup" 
+            element={<SignUpPage />} 
+          />
+          <Route 
+            path="/game/ready" 
+            element={<GameReadyPage />} 
+          />
+        </Routes>
+      </Router>
+    </GameProvider>
   );
 }
 

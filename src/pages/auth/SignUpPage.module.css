@@ -41,7 +41,8 @@
 .signupBox {
   position: relative;
   z-index: 10;
-  width: 500px;
+  width: 600px;
+  height: 727px;
   background: #0a0a1e;
   border: 7.65px solid #c5b9ff;
   box-shadow: 8px 8px 0px #423df3;
@@ -138,17 +139,10 @@
   box-shadow: 2px 2px 0px #f204e7;
 }
 
-.checkMessage {
-  font-size: 12px;
-  margin-top: 4px;
-  letter-spacing: 0.5px;
-  color: #ecfeac;
-}
-
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin: 190px 39.63px 39.63px 39.63px;
+  margin: 80px 39.63px 39.63px 39.63px;
 }
 
 .joinButton {
