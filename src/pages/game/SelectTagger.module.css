@@ -1,0 +1,122 @@
+.container {
+  position: relative;
+  width: 1280px;
+  height: 800px;
+  background: linear-gradient(135deg, #16213e 0%, #1a1a2e 50%, #0f3460 100%);
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  font-family: 'Press Start 2P', monospace;
+  overflow: hidden;
+}
+
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.square1 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 100px;
+  top: 100px;
+  background: #a946ff;
+  opacity: 0.4;
+  animation: float 6s ease-in-out infinite;
+}
+
+.square3 {
+  position: absolute;
+  width: 30px;
+  height: 30px;
+  right: 80px;
+  bottom: 150px;
+  background: #7c7c8c;
+  opacity: 0.2;
+  animation: float 7s ease-in-out infinite 0.5s;
+}
+
+@keyframes float {
+  0%, 100% {
+    transform: translateY(0px);
+  }
+  50% {
+    transform: translateY(-20px);
+  }
+}
+
+.exitBtn {
+  position: absolute;
+  top: 40px;
+  right: 60px;
+  width: 90px;
+  height: 40px;
+  background: #a946ff;
+  border: 4px solid #c5b9ff;
+  color: #ffffff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 10px;
+  font-weight: bold;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  text-transform: uppercase;
+  box-shadow: 0 6px 0px rgba(197, 185, 255, 0.3),
+    0 0 15px rgba(169, 70, 255, 0.4);
+  z-index: 20;
+}
+
+.exitBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 0 8px 0px rgba(197, 185, 255, 0.4),
+    0 0 20px rgba(169, 70, 255, 0.6);
+}
+
+.exitBtn:active {
+  transform: translateY(0px);
+  box-shadow: 0 4px 0px rgba(197, 185, 255, 0.3),
+    0 0 15px rgba(169, 70, 255, 0.4);
+}
+
+.mainContent {
+  position: relative;
+  z-index: 10;
+  width: 100%;
+  height: 100%;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  padding: 60px 60px 60px 60px;
+  box-sizing: border-box;
+}
+
+.contentBox {
+  width: 100%;
+  height: 100%;
+  background: #000000;
+  border: 8px solid #ffffff;
+  box-shadow: 0 0 20px rgba(66, 61, 243, 0.5),
+    inset 0 0 30px rgba(197, 185, 255, 0.1);
+  border-right: 8px solid #423df3;
+  border-bottom: 8px solid #423df3;
+  box-sizing: border-box;
+  position: relative;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+}
+
+.placeholder {
+  text-align: center;
+  color: #c5b9ff;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 14px;
+  letter-spacing: 1px;
+  opacity: 0.6;
+}
+
+.placeholder p {
+  margin: 0;
+  line-height: 1.5;
+}

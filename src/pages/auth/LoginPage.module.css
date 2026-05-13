@@ -161,7 +161,7 @@
   cursor: pointer;
   transition: all 0.1s ease;
   text-transform: uppercase;
-  white-space: nowrap;  /* ← 한 줄로 고정 */
+  white-space: nowrap;  
   display: flex;  
   align-items: center;  
   justify-content: center;  
