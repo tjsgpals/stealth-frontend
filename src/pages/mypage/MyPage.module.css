@@ -1,0 +1,160 @@
+/* src/pages/MyPage.module.css */
+
+.container {
+  position: relative;
+  width: 1280px;
+  height: 800px;
+  background: #1a1a2e;
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  justify-content: flex-start;
+  font-family: 'Press Start 2P', monospace;
+  overflow: hidden;
+}
+
+/* 배경 장식 */
+.background {
+  position: absolute;
+  width: 100%;
+  height: 100%;
+}
+
+.square1 {
+  position: absolute;
+  width: 24px;
+  height: 24px;
+  left: 1176px;
+  top: 80px;
+  background: #f204e7;
+  opacity: 0.3;
+}
+
+.square2 {
+  position: absolute;
+  width: 32px;
+  height: 32px;
+  left: 1120px;
+  top: 688px;
+  background: #423df3;
+  opacity: 0.3;
+}
+
+.square3 {
+  position: absolute;
+  width: 40px;
+  height: 40px;
+  left: 160px;
+  top: 632px;
+  background: #ecfeac;
+  opacity: 0.2;
+}
+
+/* 상단 헤더 */
+.headerSection {
+  position: relative;
+  z-index: 10;
+  display: flex;
+  align-items: center;
+  gap: 16px;
+  padding: 32px 32px 0 32px;
+  width: 100%;
+}
+
+.backBtn {
+  width: 48px;
+  height: 48px;
+  background: #c5b9ff;
+  border: 3.5px solid #423df3;
+  box-shadow: 3px 3px 0px #423df3;
+  color: #423df3;
+  font-family: 'Press Start 2P', monospace;
+  font-size: 32px;
+  font-weight: 900;
+  cursor: pointer;
+  transition: all 0.1s ease;
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  border-radius: 3px;
+  line-height: 1;
+}
+
+.backBtn:hover {
+  transform: translateY(-2px);
+  box-shadow: 3px 5px 0px #423df3;
+}
+
+.backBtn:active {
+  transform: translateY(0px);
+  box-shadow: 3px 3px 0px #423df3;
+}
+
+.title {
+  font-size: 30px;
+  color: #c5b9ff;
+  margin: 0;
+  letter-spacing: 2px;
+}
+
+/* 테이블 컨테이너 */
+.tableContainer {
+  position: relative;
+  z-index: 10;
+  margin-top: 32px;
+  padding: 0 32px;
+  width: calc(100% - 64px);
+  max-width: 1216px;
+}
+
+.tableWrapper {
+  background: #0a0a1e;
+  border: 7.65px solid #c5b9ff;
+  box-shadow: 6px 6px 0px #423df3;
+  overflow: hidden;
+}
+
+/* 테이블 헤더 */
+.tableHeader {
+  display: grid;
+  grid-template-columns: 280px 280px 280px 280px;
+  gap: 0;
+  background: rgba(66, 61, 243, 0.2);
+  border-bottom: 3.5px solid #c5b9ff;
+  padding: 8px;
+}
+
+.headerCell {
+  color: #ecfeac;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px;
+  text-align: left;
+  letter-spacing: 1px;
+}
+
+/* 테이블 행 */
+.tableRow {
+  display: grid;
+  grid-template-columns: 280px 280px 280px 280px;
+  gap: 0;
+  border-bottom: 1.76px solid rgba(197, 185, 255, 0.3);
+  padding: 8px;
+  align-items: center;
+}
+
+.cell {
+  color: #c5b9ff;
+  font-size: 12px;
+  padding: 8px;
+  text-align: left;
+  letter-spacing: 0.5px;
+}
+
+.cellTag {
+  color: #ecfeac;
+  font-size: 12px;
+  font-weight: bold;
+  padding: 8px;
+  text-align: left;
+}

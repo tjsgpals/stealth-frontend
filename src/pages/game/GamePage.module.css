@@ -72,22 +72,9 @@
 .scoreDisplay {
   font-family: 'Press Start 2P', monospace;
   font-size: 20px;
-  color: #c5b9ff;
-  letter-spacing: 2px;
-  text-align: center;
-}
-
-.taggerDisplay {
-  font-family: 'Press Start 2P', monospace;
-  font-size: 18px;
-  color: #c5b9ff;
+  color: #ecfeac;
   letter-spacing: 2px;
   text-align: right;
-}
-
-.taggerNumber {
-  color: #ecfeac;
-  font-weight: bold;
 }
 
 /* 메인 컨테이너 */
@@ -108,8 +95,8 @@
   position: relative;
   width: 900px;
   height: 450px;
-  background: #000000;
-  border: 8px solid #ffffff;
+  background: #2a2540;
+  border: 8px solid #c5b9ff;
   box-shadow: 0 0 20px rgba(66, 61, 243, 0.5),
               inset 0 0 30px rgba(197, 185, 255, 0.1);
   border-right: 8px solid #423df3;

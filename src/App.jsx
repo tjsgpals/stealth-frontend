@@ -9,6 +9,7 @@ import { GameProvider } from "./context/GameContext";
 import GamePage from "./pages/game/GamePage";
 import GameOverPage from "./pages/game/GameOverPage";
 import PausedPage from "./pages/game/PausedPage";
+import MyPage from "./pages/mypage/MyPage"; 
 
 function App() {
   return (
@@ -23,6 +24,7 @@ function App() {
           <Route path="/game/play" element={<GamePage />} />
           <Route path="/game/over" element={<GameOverPage />} />
           <Route path="/game/paused" element={<PausedPage />} />
+          <Route path="/mypage" element={<MyPage />} />
         </Routes>
       </Router>
     </GameProvider>

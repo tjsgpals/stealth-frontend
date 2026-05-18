@@ -1,5 +1,3 @@
-/* src/pages/auth/SignUpPage.module.css */
-
 .container {
   position: relative;
   width: 1280px;
@@ -41,8 +39,7 @@
 .signupBox {
   position: relative;
   z-index: 10;
-  width: 600px;
-  height: 727px;
+  width: 500px;
   background: #0a0a1e;
   border: 7.65px solid #c5b9ff;
   box-shadow: 8px 8px 0px #423df3;
@@ -68,7 +65,7 @@
 .inputField {
   display: flex;
   flex-direction: column;
-  gap: 8px;
+  gap: 12px;
 }
 
 .label {
@@ -76,6 +73,8 @@
   color: #c5b9ff;
   margin: 0;
   text-align: left;
+  font-weight: bold;
+  letter-spacing: 2px;
 }
 
 .input {
@@ -93,6 +92,7 @@
 .input::placeholder {
   color: #c5b9ff;
   opacity: 0.6;
+  font-size: 14px;
 }
 
 .input:focus {
@@ -142,12 +142,12 @@
 .buttonContainer {
   display: flex;
   justify-content: center;
-  margin: 80px 39.63px 39.63px 39.63px;
+  margin: 23.99px 39.63px 39.63px 39.63px;
 }
 
 .joinButton {
-  width: 95px;
-  height: 63px;
+  width: 96px;
+  height: 64px;
   background: #ecfeac;
   border: 3.5px solid #f204e7;
   box-shadow: 4px 4px 0px #f204e7;
