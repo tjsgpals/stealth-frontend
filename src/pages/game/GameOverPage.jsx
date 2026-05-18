@@ -1,5 +1,5 @@
 import { useNavigate } from 'react-router-dom';
-import { useGameContext } from '../../context/GameContext';
+import { useGameContext } from '../../context/useGameContext';
 import styles from './GameOverPage.module.css';
 
 export default function GameOverPage() {

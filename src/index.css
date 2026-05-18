@@ -117,8 +117,6 @@ code {
   background: var(--code-bg);
 }
 
-/* STEALTH 게임용 */
-@import url('https://fonts.googleapis.com/css2?family=Press+Start+2P&display=swap');
 
 html {
   height: 100%;

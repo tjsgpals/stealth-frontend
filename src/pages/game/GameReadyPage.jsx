@@ -1,6 +1,6 @@
 import { useState } from "react";
 import { useNavigate } from "react-router-dom";
-import { useGameContext } from "../../context/GameContext";
+import { useGameContext } from "../../context/useGameContext";
 import styles from "./GameReadyPage.module.css";
 import personIcon from "../../assets/icons/personIcon.png";
 

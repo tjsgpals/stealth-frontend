@@ -27,7 +27,7 @@ function MainPage({ isLoggedIn, onLogout }) {
           
           <button 
             className={styles.enterBtn}
-            onClick={() => navigate('/game')}
+            onClick={() => navigate('/game/ready')}
           >
             ENTER
           </button>
